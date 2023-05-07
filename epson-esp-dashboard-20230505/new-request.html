@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-theme="light"
+  data-layout-mode="fluid"
+  data-menu-color="dark"
+  data-topbar-color="dark"
+  data-layout-position="fixed"
+  data-sidenav-size="default"
+  data-sidenav-user="true"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>ESP Dashboard | New Request</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/hyper-config.js"></script>
+
+    <!-- Select2 css -->
+    <link
+      href="assets/vendor/select2/css/select2.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/fontawesome-free-6.4.0-web/css/all.min.css"
+    />
+
+    <!-- App css -->
+    <link
+      href="assets/css/app-saas.css"
+      rel="stylesheet"
+      type="text/css"
+      id="app-style"
+    />
+
+    <!-- Custom css -->
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body id="NewRequest">
+    <!-- Begin page -->
+    <div class="wrapper">
+      <!-- ========== Left Sidebar Start ========== -->
+      <div class="leftside-menu">
+        <!-- Sidebar Menu Toggle Button -->
+        <div class="d-flex justify-content-end p-2">
+          <button class="button-toggle-menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Brand Logo Light -->
+        <a href="index.html" class="logo d-flex justify-content-start">
+          <span class="logo-lg">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </span>
+          <span class="logo-sm w-100">
+            <img src="assets/images/logo-sm.svg" alt="small logo" />
+          </span>
+        </a>
+
+        <!-- Full Sidebar Menu Close Button -->
+        <div class="button-close-fullsidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Sidebar -left -->
+        <div class="h-100" id="leftside-menu-container">
+          <!-- Leftbar User -->
+          <div class="leftbar-user py-2">
+            <span
+              class="leftbar-user-name d-flex justify-content-start fw-normal text-secondary"
+            >
+              GOOD MORNING, JASON</span
+            >
+          </div>
+
+          <!--- Sidemenu -->
+          <ul class="side-nav h-100">
+            <!-- Dashboard -->
+            <li class="side-nav-item">
+              <a href="index.html" class="side-nav-link active">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboards</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a
+                data-bs-toggle="collapse"
+                href="#sidebarForms"
+                aria-expanded="false"
+                aria-controls="sidebarPages"
+                class="side-nav-link"
+              >
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <span>Forms</span>
+                <span class="fa-solid fa-plus lh-base float-end pe-2"></span>
+              </a>
+              <div class="collapse" id="sidebarForms">
+                <ul class="side-nav-second-level">
+                  <li>
+                    <a href="new-request.html">New Request</a>
+                  </li>
+                  <li>
+                    <span class="badge bg-info lh-base float-end text-dark"
+                      >10</span
+                    >
+                    <a href="inbox.html">Inbox</a>
+                  </li>
+                  <li>
+                    <a href="outbox.html">Outbox</a>
+                  </li>
+                  <li>
+                    <a href="completed.html">Completed</a>
+                  </li>
+                  <li>
+                    <a href="cancelled.html">Cancelled</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="reports.html" class="side-nav-link">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="knowledge-base.html" class="side-nav-link">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>SAP Knowledge Base</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="admin.html" class="side-nav-link">
+                <i class="fa-solid fa-user-gear"></i>
+                <span>Admin</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="settings.html" class="side-nav-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+          </ul>
+          <!--- End Sidemenu -->
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- ========== Left Sidebar End ========== -->
+
+      <!-- ============================================================== -->
+      <!-- Start Page Content here -->
+      <!-- ============================================================== -->
+
+      <div class="content-page">
+        <div class="content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div class="page-title-box">
+                  <div class="page-title">New Request</div>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+            <!-- tab nav -->
+            <ul class="nav nav-tabs nav-justified">
+              <!-- EIN -->
+              <li class="nav-item">
+                <a
+                  href="#tabEIN"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0 active"
+                >
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <span class="d-none d-md-block">EIN</span>
+                </a>
+              </li>
+              <!-- EMSB -->
+              <li class="nav-item">
+                <a
+                  href="#tabEMSB"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <span class="d-none d-md-block">EMSB</span>
+                </a>
+              </li>
+              <!-- EPC -->
+              <li class="nav-item">
+                <a
+                  href="#tabEPC"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <span class="d-none d-md-block">EPC</span>
+                </a>
+              </li>
+              <!-- ESP -->
+              <li class="nav-item">
+                <a
+                  href="#tabESP"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <span class="d-none d-md-block">ESP</span>
+                </a>
+              </li>
+              <!-- ETH -->
+              <li class="nav-item">
+                <a
+                  href="#tabETH"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <span class="d-none d-md-block">ETH</span>
+                </a>
+              </li>
+              <!-- Helpdesk -->
+              <li class="nav-item">
+                <a
+                  href="#tabHelpdesk"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-circle-question"></i>
+                  <span class="d-none d-md-block">Helpdesk</span>
+                </a>
+              </li>
+              <!-- Regional -->
+              <li class="nav-item">
+                <a
+                  href="#tabRegional"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                  <span class="d-none d-md-block">Regional</span>
+                </a>
+              </li>
+              <!-- ETHC -->
+              <li class="nav-item">
+                <a
+                  href="#tabETHC"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <span class="d-none d-md-block">ETHC</span>
+                </a>
+              </li>
+              <!-- ETC -->
+              <li class="nav-item">
+                <a
+                  href="#tabETC"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <span class="d-none d-md-block">ETC</span>
+                </a>
+              </li>
+              <!-- Support -->
+              <li class="nav-item">
+                <a
+                  href="#tabSupport"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <span class="d-none d-md-block">Support</span>
+                </a>
+              </li>
+            </ul>
+            <!-- tab nav -->
+            <!-- tab content -->
+            <div class="tab-content">
+              <!-- ========== EIN ========== -->
+              <div class="tab-pane show active" id="tabEIN">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary F1"
+                  >
+                    <i class="fa-solid-EIN_form"></i>
+                    <span>EIN ITR</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-EIN_form"></i>
+                    <span>EIN ITR Demo</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-EIN_form"></i>
+                    <span>EIN IWT</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- EIN ITR Form -->
+                <form id="F1" class="d-none">
+                  <div class="fs-4 fw-bold mb-2 ep-header">EIN ITR</div>
+                  <!-- Form Information -->
+                  <div class="border mb-2">
+                    <div class="bg-info-lighten fw-bold py-2 px-3">
+                      Form Information
+                    </div>
+                    <div class="p-3">
+                      <div class="row mb-3">
+                        <span class="col-2">Transaction ID :</span>
+                        <span class="col-4 fw-bold"></span>
+                        <span class="col-2">Financial Year :</span>
+                        <span class="col-4 fw-bold"></span>
+                      </div>
+                      <div class="row mb-3">
+                        <span class="col-2">Submission Date :</span>
+                        <span class="col-4 fw-bold">12/02/2023</span>
+                        <span class="col-2">From Status :</span>
+                        <span class="col-4 fw-bold">Form Creation</span>
+                      </div>
+                      <div class="row mb-3">
+                        <span class="col-2">Reference No :</span>
+                        <span class="col-4 fw-bold"></span>
+                      </div>
+                      <div class="row mb-0">
+                        <label
+                          for="F1RejectRemarks"
+                          class="col-2 col-form-label"
+                        >
+                          Reject Remarks :
+                        </label>
+                        <div class="col-10">
+                          <textarea
+                            class="form-control"
+                            id="F1RejectRemarks"
+                            rows="5"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Requestor Information -->
+                  <div class="border mb-2">
+                    <div class="bg-info-lighten fw-bold py-2 px-3">
+                      Requestor Information
+                    </div>
+                    <div class="p-3">
+                      <div class="row mb-3">
+                        <span class="col-2">Company :</span>
+                        <span class="col-4 fw-bold">ESP</span>
+                        <span class="col-2">Cost Center :</span>
+                        <span class="col-4 fw-bold">D5-07</span>
+                      </div>
+                      <div class="row mb-0">
+                        <span class="col-2">Employee Name :</span>
+                        <span class="col-4 fw-bold">John Tan</span>
+                        <span class="col-2">Department Name :</span>
+                        <span class="col-4 fw-bold">IT-ERP</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Transfer Information -->
+                  <div class="border mb-2">
+                    <div class="bg-info-lighten fw-bold py-2 px-3">
+                      Transfer Information
+                    </div>
+                    <div class="p-3">
+                      <div class="row mb-3">
+                        <label
+                          for="F1MovementType"
+                          class="col-2 col-form-label required"
+                        >
+                          Movement Type :
+                        </label>
+                        <div class="col-4">
+                          <select
+                            id="F1MovementType"
+                            class="form-control"
+                            data-toggle="select2"
+                            required
+                          >
+                            <option></option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                          </select>
+                        </div>
+                        <label
+                          for="F1CostCharge"
+                          class="col-2 col-form-label required py-0"
+                        >
+                          Cost Charge to Department :
+                        </label>
+                        <div class="col-4">
+                          <select
+                            id="F1CostCharge"
+                            class="form-control"
+                            data-toggle="select2"
+                            required
+                          >
+                            <option></option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label
+                          for="F1TransferFrom"
+                          class="col-2 col-form-label required"
+                        >
+                          Transfer From :
+                        </label>
+                        <div class="col-4">
+                          <select
+                            id="F1TransferFrom"
+                            class="form-control"
+                            data-toggle="select2"
+                            required
+                          >
+                            <option></option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                          </select>
+                        </div>
+                        <label
+                          for="F1TransferTo"
+                          class="col-2 col-form-label required"
+                        >
+                          Transfer To :
+                        </label>
+                        <div class="col-4">
+                          <select
+                            id="F1TransferTo"
+                            class="form-control"
+                            data-toggle="select2"
+                            required
+                          >
+                            <option></option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="F1RequestFrom" class="col-2 col-form-label">
+                          Request From :
+                        </label>
+                        <div class="col-4">
+                          <select
+                            id="F1RequestFrom"
+                            class="form-control"
+                            data-toggle="select2"
+                            required
+                          >
+                            <option></option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label
+                          for="F1RequestTo"
+                          class="col-2 col-form-label required py-0"
+                        >
+                          Request To Product Marketing :
+                        </label>
+                        <div class="col-4">
+                          <select
+                            id="F1RequestTo"
+                            class="form-control"
+                            data-toggle="select2"
+                            required
+                          >
+                            <option></option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                          </select>
+                        </div>
+                        <label
+                          for="F1Consignee"
+                          class="col-2 col-form-label required"
+                        >
+                          Consignee :
+                        </label>
+                        <div class="col-4">
+                          <select
+                            id="F1Consignee"
+                            class="form-control"
+                            data-toggle="select2"
+                            required
+                          >
+                            <option></option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label
+                          for="F1ActivityType"
+                          class="col-2 col-form-label"
+                        >
+                          Activity Type :
+                        </label>
+                        <div class="col-4">
+                          <select class="form-select" id="F1ActivityType">
+                            <option selected>Select One of the Activity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label
+                          for="F1RequestorInstruction"
+                          class="col-2 col-form-label"
+                        >
+                          Requestor Instruction :
+                        </label>
+                        <div class="col-10">
+                          <textarea
+                            class="form-control"
+                            id="F1RequestorInstruction"
+                            rows="5"
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label
+                          for="F1TransferReason"
+                          class="col-2 col-form-label"
+                        >
+                          Transfer Reason :
+                        </label>
+                        <div class="col-10">
+                          <textarea
+                            class="form-control"
+                            id="F1TransferReason"
+                            rows="5"
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label
+                          for="F1GAInstruction"
+                          class="col-2 col-form-label"
+                        >
+                          GA Instruction :
+                        </label>
+                        <div class="col-10">
+                          <textarea
+                            class="form-control"
+                            id="F1GAInstruction"
+                            rows="5"
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <div class="row mb-0">
+                        <span class="col-2">SAP Doc No :</span>
+                        <span class="col-10 fw-bold"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Material Information -->
+                  <div class="border mb-2">
+                    <div class="bg-info-lighten fw-bold py-2 px-3">
+                      Material Information
+                    </div>
+                    <div class="px-2">
+                      <div class="row">
+                        <div class="col-6">
+                          <button
+                            type="button"
+                            class="btn btn-link text-secondary fw-bold"
+                          >
+                            <i class="fa-solid fa-plus pe-1"></i>
+                            <span>Add</span>
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-link text-secondary fw-bold"
+                          >
+                            <i class="fa-solid fa-pen-to-square pe-1"></i>
+                            <span>Edit</span>
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-link text-secondary fw-bold"
+                          >
+                            <i class="fa-solid fa-minus pe-1"></i>
+                            <span>Delete</span>
+                          </button>
+                        </div>
+                        <div class="col-6 text-end">
+                          <button
+                            type="button"
+                            class="btn btn-link text-secondary fw-bold"
+                          >
+                            <i class="fa-solid fa-arrows-rotate pe-1"></i>
+                            <span>Update</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <table class="table table-hover mb-0">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th class="border-end">Material No.</th>
+                          <th class="border-end">Material Description</th>
+                          <th class="border-end">Qty Required</th>
+                          <th class="border-end">Amount</th>
+                          <th class="border-end">Unit Price</th>
+                          <th>Qty Processed</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" />
+                            </div>
+                          </td>
+                          <td class="fw-bolder">ETR 123456</td>
+                          <td>Lorem Ipsum</td>
+                          <td>200</td>
+                          <td>323</td>
+                          <td>888</td>
+                          <td>1000</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" />
+                            </div>
+                          </td>
+                          <td class="fw-bolder">ATR 123456</td>
+                          <td>Lorem Ipsum</td>
+                          <td>700</td>
+                          <td>54</td>
+                          <td>8888</td>
+                          <td>1030</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- Dropzone -->
+                  <!-- File Upload -->
+                  <div
+                    action="/"
+                    class="form-control dropzone mb-5"
+                    id="attachment"
+                    data-plugin="dropzone"
+                    data-previews-container="#file-previews"
+                    data-upload-preview-template="#uploadPreviewTemplate"
+                  >
+                    <div class="fallback">
+                      <input name="file" type="file" multiple />
+                    </div>
+
+                    <div
+                      class="dz-message needsclick text-primary fw-bold my-0"
+                    >
+                      <i class="fa-solid fa-paperclip pe-1"></i>
+                      <span>Add Attachment</span>
+                    </div>
+                  </div>
+                  <!-- Preview -->
+                  <div class="dropzone-previews mt-3" id="file-previews"></div>
+                  <!-- file preview template -->
+                  <div class="d-none" id="uploadPreviewTemplate">
+                    <div class="card mt-1 mb-0 shadow-none border">
+                      <div class="p-2">
+                        <div class="row align-items-center">
+                          <div class="col-auto">
+                            <img
+                              data-dz-thumbnail
+                              src="#"
+                              class="avatar-sm rounded bg-light"
+                              alt=""
+                            />
+                          </div>
+                          <div class="col ps-0">
+                            <a
+                              href="javascript:void(0);"
+                              class="text-muted fw-bold"
+                              data-dz-name
+                            ></a>
+                            <p class="mb-0" data-dz-size></p>
+                          </div>
+                          <div class="col-auto">
+                            <!-- Button -->
+                            <a
+                              href=""
+                              class="btn btn-link btn-lg text-muted"
+                              data-dz-remove
+                            >
+                              <i class="ri-close-line"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="d-grid">
+                    <button
+                      class="btn btn-primary shadow-none rounded-3"
+                      type="submit"
+                    >
+                      Submit Form
+                    </button>
+                  </div>
+                </form>
+                <!-- EIN ITR Form -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- ========== EIN ========== -->
+              <!-- ========== EMSB ========== -->
+              <div class="tab-pane" id="tabEMSB">
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-EMSB_form"></i>
+                    <span>EMSB ITR</span>
+                  </button>
+                </div>
+              </div>
+              <!-- ========== EMSB ========== -->
+              <!-- ========== EPC ========== -->
+              <div class="tab-pane" id="tabEPC">
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-EPC_form"></i>
+                    <span>EPC ITR</span>
+                    <span>(Demo Unit)</span>
+                  </button>
+                </div>
+              </div>
+              <!-- ========== EPC ========== -->
+              <!-- ========== ESP ========== -->
+              <div class="tab-pane" id="tabESP">
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ESP_form"></i>
+                    <span>Auto DN/CN</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ESP_form"></i>
+                    <span>ED Buffer</span>
+                    <span>Stock Order Form</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ESP_form"></i>
+                    <span>ED Free Sample</span>
+                    <span>Request Form</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ESP_form"></i>
+                    <span>ED Price Maintenance & Quotation System</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-gifts mb-2"></i>
+                    <span>ENT. and Gift Acceptance</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ESP_form"></i>
+                    <span>ESP Fixed Asset</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ESP_form"></i>
+                    <span>ESP ITR</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ESP_form"></i>
+                    <span>ESP IWT</span>
+                  </button>
+                </div>
+              </div>
+              <!-- ========== ESP ========== -->
+              <!-- ========== ETH ========== -->
+              <div class="tab-pane" id="tabETH">
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ETH_form"></i>
+                    <span>ETH ITR</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ETH_form"></i>
+                    <span>ETH ITR</span>
+                    <span>(Demo Unit)</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-ETH_form"></i>
+                    <span>ETH IWT</span>
+                  </button>
+                </div>
+              </div>
+              <!-- ========== ETH ========== -->
+              <!-- ========== Helpdesk ========== -->
+              <div class="tab-pane" id="tabHelpdesk">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary F2"
+                  >
+                    <i class="fa-solid-help_form"></i>
+                    <span>OH ISS</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-help_form"></i>
+                    <span>OH SAP</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-key mb-2"></i>
+                    <span>SAP Password Reset</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-ticket mb-2"></i>
+                    <span>Web Ticketing System</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- OHISS Form -->
+                <form id="F2" class="d-none">
+                  <div class="fs-4 fw-bold mb-2 ep-header">
+                    Online Helpdesk - OHISS
+                  </div>
+                  <!-- Form Information -->
+                  <div class="border mb-2">
+                    <div class="bg-info-lighten fw-bold py-2 px-3">
+                      Form Information
+                    </div>
+                    <div class="p-3">
+                      <div class="row mb-3">
+                        <span class="col-2">Transaction ID :</span>
+                        <span class="col-4 fw-bold"></span>
+                        <span class="col-2">Financial Year :</span>
+                        <span class="col-4 fw-bold">2022</span>
+                      </div>
+                      <div class="row mb-3">
+                        <span class="col-2">Submission Date :</span>
+                        <span class="col-4 fw-bold">18/10/2022</span>
+                        <span class="col-2">From Status :</span>
+                        <span class="col-4 fw-bold">Form Creation</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Requestor Information -->
+                  <div class="border mb-2">
+                    <div class="bg-info-lighten fw-bold py-2 px-3">
+                      Requestor Information
+                    </div>
+                    <div class="p-3">
+                      <div class="row mb-3">
+                        <span class="col-2">Employee Name :</span>
+                        <span class="col-4 fw-bold">Kee Kai Chee</span>
+                        <span class="col-2">Company :</span>
+                        <span class="col-4 fw-bold">ESP</span>
+                      </div>
+                      <div class="row mb-0">
+                        <span class="col-2">Department Name :</span>
+                        <span class="col-4 fw-bold">IT-ERP</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- User Request -->
+                  <div class="border mb-2">
+                    <div class="bg-info-lighten fw-bold py-2 px-3">
+                      User Request
+                    </div>
+                    <div class="p-3">
+                      <div class="row mb-3">
+                        <label
+                          for="F1RequestCategory"
+                          class="col-2 col-form-label"
+                        >
+                          Request Category :
+                        </label>
+                        <div class="col-10">
+                          <select class="form-select" id="F1RequestCategory">
+                            <option value="Calendly">Calendly</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="F1SubCategory" class="col-2 col-form-label">
+                          Sub Category :
+                        </label>
+                        <div class="col-10">
+                          <select class="form-select" id="F1SubCategory">
+                            <option value="Request">Request</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="F1Description" class="col-2 col-form-label">
+                          Description :
+                        </label>
+                        <div class="col-10">
+                          <textarea
+                            class="form-control"
+                            id="F1Description"
+                            rows="5"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="d-grid">
+                    <button
+                      class="btn btn-primary shadow-none rounded-3"
+                      type="submit"
+                    >
+                      Submit Form
+                    </button>
+                  </div>
+                </form>
+                <!-- OHISS Form -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- ========== Helpdesk ========== -->
+              <!-- ========== Regional ========== -->
+              <div class="tab-pane" id="tabRegional">
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-chart-line mb-2"></i>
+                    <span>A & P KPI</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-user-tag mb-2"></i>
+                    <span>Customer Maintenance</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-regional_form"></i>
+                    <span>Demo / Standby Unit Extension</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-regional_form"></i>
+                    <span>Demo / Standby Unit Loan</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-regional_form"></i>
+                    <span>Demo / Standby Unit Return</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-contract mb-2"></i>
+                    <span>Form C</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid-regional_form"></i>
+                    <span>MDMS</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-user-xmark mb-2"></i>
+                    <span>System ID Termination</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-gears mb-2"></i>
+                    <span>Vendor Maintenance</span>
+                  </button>
+                </div>
+              </div>
+              <!-- ========== Regional ========== -->
+              <!-- ========== ETHC ========== -->
+              <div class="tab-pane" id="tabETHC">
+                <div class="d-flex flex-wrap form-selection">ETHC</div>
+              </div>
+              <!-- ========== ETHC ========== -->
+              <!-- ========== ETC ========== -->
+              <div class="tab-pane" id="tabETC">
+                <div class="d-flex flex-wrap form-selection">ETC</div>
+              </div>
+              <!-- ========== ETC ========== -->
+              <!-- ========== Support========== -->
+              <div class="tab-pane" id="tabSupport">
+                <div class="d-flex flex-wrap form-selection">Support</div>
+              </div>
+              <!-- ========== Support========== -->
+            </div>
+            <!-- tab content -->
+          </div>
+          <!-- container -->
+        </div>
+        <!-- content -->
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- End Page content -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!-- Typehead -->
+    <script src="assets/vendor/typeahead.js/typeahead.bundle.min.js"></script>
+    <!-- Typehead Demo js -->
+    <script src="assets/vendor/handlebars/handlebars.min.js"></script>
+    <script src="assets/js/pages/demo.typehead.js"></script>
+
+    <!-- Select2 Js -->
+    <script src="assets/vendor/select2/js/select2.min.js"></script>
+
+    <!-- Dropzone File Upload js -->
+    <script src="assets/vendor/dropzone/min/dropzone.min.js"></script>
+    <!-- File Upload Demo js -->
+    <script src="assets/js/ui/component.fileupload.js"></script>
+
+    <!-- Responsive tabs js -->
+    <script src="assets/js/responsivetabs.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

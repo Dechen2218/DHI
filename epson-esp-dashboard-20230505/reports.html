@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-theme="light"
+  data-layout-mode="fluid"
+  data-menu-color="dark"
+  data-topbar-color="dark"
+  data-layout-position="fixed"
+  data-sidenav-size="default"
+  data-sidenav-user="true"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>ESP Dashboard | Reports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/hyper-config.js"></script>
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/fontawesome-free-6.4.0-web/css/all.min.css"
+    />
+
+    <!-- Bootstrap Datepicker css -->
+    <link
+      href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- App css -->
+    <link
+      href="assets/css/app-saas.css"
+      rel="stylesheet"
+      type="text/css"
+      id="app-style"
+    />
+
+    <!-- Custom css -->
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body id="Reports">
+    <!-- Begin page -->
+    <div class="wrapper">
+      <!-- ========== Left Sidebar Start ========== -->
+      <div class="leftside-menu">
+        <!-- Sidebar Menu Toggle Button -->
+        <div class="d-flex justify-content-end p-2">
+          <button class="button-toggle-menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Brand Logo Light -->
+        <a href="index.html" class="logo d-flex justify-content-start">
+          <span class="logo-lg">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </span>
+          <span class="logo-sm w-100">
+            <img src="assets/images/logo-sm.svg" alt="small logo" />
+          </span>
+        </a>
+
+        <!-- Full Sidebar Menu Close Button -->
+        <div class="button-close-fullsidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Sidebar -left -->
+        <div class="h-100" id="leftside-menu-container">
+          <!-- Leftbar User -->
+          <div class="leftbar-user py-2">
+            <span
+              class="leftbar-user-name d-flex justify-content-start fw-normal text-secondary"
+            >
+              GOOD MORNING, JASON</span
+            >
+          </div>
+
+          <!--- Sidemenu -->
+          <ul class="side-nav h-100">
+            <!-- Dashboard -->
+            <li class="side-nav-item">
+              <a href="index.html" class="side-nav-link active">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboards</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a
+                data-bs-toggle="collapse"
+                href="#sidebarForms"
+                aria-expanded="false"
+                aria-controls="sidebarPages"
+                class="side-nav-link"
+              >
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <span>Forms</span>
+                <span class="fa-solid fa-plus lh-base float-end pe-2"></span>
+              </a>
+              <div class="collapse" id="sidebarForms">
+                <ul class="side-nav-second-level">
+                  <li>
+                    <a href="new-request.html">New Request</a>
+                  </li>
+                  <li>
+                    <span class="badge bg-info lh-base float-end text-dark"
+                      >10</span
+                    >
+                    <a href="inbox.html">Inbox</a>
+                  </li>
+                  <li>
+                    <a href="outbox.html">Outbox</a>
+                  </li>
+                  <li>
+                    <a href="completed.html">Completed</a>
+                  </li>
+                  <li>
+                    <a href="cancelled.html">Cancelled</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="reports.html" class="side-nav-link">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="knowledge-base.html" class="side-nav-link">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>SAP Knowledge Base</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="admin.html" class="side-nav-link">
+                <i class="fa-solid fa-user-gear"></i>
+                <span>Admin</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="settings.html" class="side-nav-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+          </ul>
+          <!--- End Sidemenu -->
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- ========== Left Sidebar End ========== -->
+
+      <!-- ============================================================== -->
+      <!-- Start Page Content here -->
+      <!-- ============================================================== -->
+
+      <div class="content-page">
+        <div class="content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div class="page-title-box">
+                  <div class="page-title">Reports</div>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- tab nav -->
+            <ul class="nav nav-tabs nav-justified">
+              <!-- Administration -->
+              <li class="nav-item">
+                <a
+                  href="#tabAdministration"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0 active"
+                >
+                  <span class="d-none d-md-block">Administration</span>
+                </a>
+              </li>
+              <!-- Demo Unit -->
+              <li class="nav-item">
+                <a
+                  href="#tabDemoUnit"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <span class="d-none d-md-block">Demo Unit</span>
+                </a>
+              </li>
+              <!-- ED -->
+              <li class="nav-item">
+                <a
+                  href="#tabED"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-earth-asia"></i>
+                  <span class="d-none d-md-block">ED</span>
+                </a>
+              </li>
+              <!-- Finance/GA -->
+              <li class="nav-item">
+                <a
+                  href="#tabFinance"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-dollar-sign"></i>
+                  <span class="d-none d-md-block">Finance/GA</span>
+                </a>
+              </li>
+              <!-- Form C -->
+              <li class="nav-item">
+                <a
+                  href="#tabFormC"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-pen"></i>
+                  <span class="d-none d-md-block">Form C</span>
+                </a>
+              </li>
+              <!-- Helpdesk -->
+              <li class="nav-item">
+                <a
+                  href="#tabHelpdesk"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-circle-question"></i>
+                  <span class="d-none d-md-block">Helpdesk</span>
+                </a>
+              </li>
+              <!-- HR/Legal -->
+              <li class="nav-item">
+                <a
+                  href="#tabHR"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-id-card"></i>
+                  <span class="d-none d-md-block">HR/Legal</span>
+                </a>
+              </li>
+              <!-- Knowledgebase -->
+              <li class="nav-item">
+                <a
+                  href="#tabKnowledgebase"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-circle-info"></i>
+                  <span class="d-none d-md-block">Knowledgebase</span>
+                </a>
+              </li>
+              <!-- MDMS -->
+              <li class="nav-item">
+                <a
+                  href="#tabMDMS"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <span class="d-none d-md-block">MDMS</span>
+                </a>
+              </li>
+              <!-- Transfer -->
+              <li class="nav-item">
+                <a
+                  href="#tabTransfer"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <span class="d-none d-md-block">Transfer</span>
+                </a>
+              </li>
+            </ul>
+            <!-- tab nav -->
+
+            <!-- tab content -->
+            <div class="tab-content">
+              <!-- Administration -->
+              <div class="tab-pane show active" id="tabAdministration">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary F3"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>System ID Termination Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary F4"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Worklist Management Log</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Worklist Status Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <form id="F3" class="d-none">
+                  <div class="fs-4 fw-bold mb-2 ep-header">
+                    System ID Termination Application Report
+                  </div>
+                  <div class="border mb-3 p-3">
+                    <div class="col-6">
+                      <div class="row mb-3">
+                        <label
+                          for="F3FinancialYear"
+                          class="col-4 col-form-label"
+                        >
+                          Financial Year
+                        </label>
+                        <div class="col-8">
+                          <select class="form-select" id="F3FinancialYear">
+                            <option value="FY22">FY22</option>
+                            <option value="FY23">FY23</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="F3Company" class="col-4 col-form-label">
+                          Company
+                        </label>
+                        <div class="col-8">
+                          <select class="form-select" id="F3Company">
+                            <option></option>
+                            <option value="company1">Company 1</option>
+                            <option value="company2">Company 2</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label
+                          for="F3TransactionID"
+                          class="col-4 col-form-label"
+                        >
+                          Transaction ID
+                        </label>
+                        <div class="col-8">
+                          <input
+                            type="text"
+                            id="F3TransactionID"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Submit -->
+                  <div class="d-grid">
+                    <button
+                      class="btn btn-primary shadow-none rounded-3"
+                      type="submit"
+                    >
+                      Generate Report
+                    </button>
+                  </div>
+                </form>
+                <form id="F4" class="d-none">
+                  <div class="fs-4 fw-bold mb-2 ep-header">
+                    Worklist Management Log
+                  </div>
+                  <div class="border mb-3 p-3">
+                    <div class="row mb-3">
+                      <label for="F4Company" class="col-2 col-form-label">
+                        Company
+                      </label>
+                      <div class="col-4">
+                        <select class="form-select" id="F4Company">
+                          <option value="EIN">EIN</option>
+                          <option value="company1">Company 1</option>
+                          <option value="company2">Company 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="F4Department" class="col-2 col-form-label">
+                        Department
+                      </label>
+                      <div class="col-4">
+                        <select class="form-select" id="F4Department">
+                          <option value="D001">
+                            D001 (Corporate Management)
+                          </option>
+                          <option value="D002">D002</option>
+                          <option value="D003">D003</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="F4ActionBy" class="col-2 col-form-label">
+                        Action By
+                      </label>
+                      <div class="col-4">
+                        <select class="form-select" id="F4ActionBy">
+                          <option value="1">Muto Yusuke (EIN)</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                      </div>
+                      <div class="col-4 d-flex align-items-center">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="F4ActionByInactive"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="F4ActionByInactive"
+                            >Show Inactive</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="F4FromDate" class="col-2 col-form-label">
+                        From Date
+                      </label>
+                      <div class="col-4">
+                        <div
+                          class="position-relative input-group"
+                          id="F4FromDate"
+                        >
+                          <input
+                            type="text"
+                            class="form-control border-end-0"
+                            data-provide="datepicker"
+                            data-date-format="dd/mm/yyyy"
+                            data-date-container="#F4FromDate"
+                          />
+                          <span class="input-group-text bg-transparent">
+                            <i class="fa-solid fa-calendar"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="F4ToDate" class="col-2 col-form-label">
+                        To Date
+                      </label>
+                      <div class="col-4">
+                        <div
+                          class="position-relative input-group"
+                          id="F4ToDate"
+                        >
+                          <input
+                            type="text"
+                            class="form-control border-end-0"
+                            data-provide="datepicker"
+                            data-date-format="dd/mm/yyyy"
+                            data-date-container="#F4ToDate"
+                          />
+                          <span class="input-group-text bg-transparent">
+                            <i class="fa-solid fa-calendar"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Submit -->
+                  <div class="d-grid">
+                    <button
+                      class="btn btn-primary shadow-none rounded-3"
+                      type="submit"
+                    >
+                      Generate Report
+                    </button>
+                  </div>
+                </form>
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- Demo Unit -->
+              <div class="tab-pane" id="tabDemoUnit">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>DU / SB Availibility Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>DU / SB Delivery Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>DU / SB Extension Availibility Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>DU / SB GST Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>DU / SB Loan Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>DU / SB Movement Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>DU / SB Outstanding Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>DU / SB Return Application Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- ED -->
+              <div class="tab-pane" id="tabED">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Buffer Stock Order Form Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Customer Quotation System Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Free Sample Request Form Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Price Maintenance /Quotation Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- Finance/GA -->
+              <div class="tab-pane" id="tabFinance">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>A & P KPI Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>A & P KPI Details Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>A & P KPI Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Auto DN/CN Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Customer Maintenance Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>ESP Fixed Asset Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Vendor Maintenance Application Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- Form C -->
+              <div class="tab-pane" id="tabFormC">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Form C Contract Deatails Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Form C ESC Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Form C ESP Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Form C Support Loss Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Form C Tracking Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Form C Tracking Report For Sales</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>PreForm C Application Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- Helpdesk -->
+              <div class="tab-pane" id="tabHelpdesk">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Action Taken Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Modules Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>OHISS Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>OHSAP Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>OHSAP Status Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>SAP Password Reset Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>TAT Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Timesheet Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Web Ticketing System Application Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- HR/Legal -->
+              <div class="tab-pane" id="tabHR">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>CRF Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Ent. and Gift Acceptance Application Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- Knowledgebase -->
+              <div class="tab-pane" id="tabKnowledgebase">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Knowledgebase Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Utilisation Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- MDMS -->
+              <div class="tab-pane" id="tabMDMS">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>MDMS Application Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+              <!-- Transfer -->
+              <div class="tab-pane" id="tabTransfer">
+                <!-- Forms Selection -->
+                <div class="d-flex flex-wrap form-selection">
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>ITR Application Detail Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>ITR Application Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>IWT Application Detail Report</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ep-sq-btn btn btn-outline-primary"
+                  >
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>IWT Application Report</span>
+                  </button>
+                </div>
+                <!-- Forms Selection -->
+                <!-- ---------- Forms ---------- -->
+                <!-- ---------- Forms ---------- -->
+              </div>
+            </div>
+            <!-- tab content -->
+          </div>
+          <!-- container -->
+        </div>
+        <!-- content -->
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- End Page content -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!-- Bootstrap Datepicker js -->
+    <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+    <!-- Responsive tabs js -->
+    <script src="assets/js/responsivetabs.js"></script>
+
+    <!-- Custom js -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

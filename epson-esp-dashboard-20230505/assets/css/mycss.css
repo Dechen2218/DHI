@@ -1,0 +1,23 @@
+ @media (max-width: 768px) {
+    .leftside-menu .button-toggle-menu {
+      display: none;
+    }
+  }
+   
+   @media (min-width: 992px) {
+    .navbar-custom {
+      display: none !important;
+    }
+  }
+
+/*
+@media (min-width: 992px) {
+  .navbar-custom,
+  .navbar-custom .topbar,
+  .navbar-custom .button-toggle-menu {
+    display: none;
+  }
+}
+*/
+
+

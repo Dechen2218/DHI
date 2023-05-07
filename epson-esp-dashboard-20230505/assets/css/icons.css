@@ -1,0 +1,53 @@
+@font-face {
+  font-family: esp-icons;
+  src: url('../fonts/fa-solid.eot?bvuo5a');
+  src: url('../fonts/fa-solid.eot?bvuo5a#iefix') format('embedded-opentype'),
+    url('../fonts/fa-solid.ttf?bvuo5a') format('truetype'),
+    url('../fonts/fa-solid.woff?bvuo5a') format('woff'),
+    url('../fonts/fa-solid.svg?bvuo5a#fa-solid') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  /* font-display: block; */
+}
+
+[class*=' fa-solid-']:before,
+[class^='fa-solid-']:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: esp-icons !important;
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-solid-code-icon:before {
+  content: '\63';
+}
+.fa-solid-EIN_form:before {
+  content: '\31';
+}
+.fa-solid-EMSB_form:before {
+  content: '\32';
+}
+.fa-solid-EPC_form:before {
+  content: '\33';
+}
+.fa-solid-ESP_form:before {
+  content: '\34';
+}
+.fa-solid-ETH_form:before {
+  content: '\35';
+}
+.fa-solid-help_form:before {
+  content: '\36';
+}
+.fa-solid-regional_form:before {
+  content: '\37';
+}

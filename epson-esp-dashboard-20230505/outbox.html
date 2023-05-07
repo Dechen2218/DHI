@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-theme="light"
+  data-layout-mode="fluid"
+  data-menu-color="dark"
+  data-topbar-color="dark"
+  data-layout-position="fixed"
+  data-sidenav-size="default"
+  data-sidenav-user="true"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>ESP Dashboard | Outbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/hyper-config.js"></script>
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/fontawesome-free-6.4.0-web/css/all.min.css"
+    />
+
+    <!-- App css -->
+    <link
+      href="assets/css/app-saas.css"
+      rel="stylesheet"
+      type="text/css"
+      id="app-style"
+    />
+
+    <!-- Custom css -->
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body id="Inbox">
+    <!-- Begin page -->
+    <div class="wrapper">
+      <!-- ========== Left Sidebar Start ========== -->
+      <div class="leftside-menu">
+        <!-- Sidebar Menu Toggle Button -->
+        <div class="d-flex justify-content-end p-2">
+          <button class="button-toggle-menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Brand Logo Light -->
+        <a href="index.html" class="logo d-flex justify-content-start">
+          <span class="logo-lg">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </span>
+          <span class="logo-sm w-100">
+            <img src="assets/images/logo-sm.svg" alt="small logo" />
+          </span>
+        </a>
+
+        <!-- Full Sidebar Menu Close Button -->
+        <div class="button-close-fullsidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Sidebar -left -->
+        <div class="h-100" id="leftside-menu-container">
+          <!-- Leftbar User -->
+          <div class="leftbar-user py-2">
+            <span
+              class="leftbar-user-name d-flex justify-content-start fw-normal text-secondary"
+            >
+              GOOD MORNING, JASON</span
+            >
+          </div>
+
+          <!--- Sidemenu -->
+          <ul class="side-nav h-100">
+            <!-- Dashboard -->
+            <li class="side-nav-item">
+              <a href="index.html" class="side-nav-link active">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboards</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a
+                data-bs-toggle="collapse"
+                href="#sidebarForms"
+                aria-expanded="false"
+                aria-controls="sidebarPages"
+                class="side-nav-link"
+              >
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <span>Forms</span>
+                <span class="fa-solid fa-plus lh-base float-end pe-2"></span>
+              </a>
+              <div class="collapse" id="sidebarForms">
+                <ul class="side-nav-second-level">
+                  <li>
+                    <a href="new-request.html">New Request</a>
+                  </li>
+                  <li>
+                    <span class="badge bg-info lh-base float-end text-dark"
+                      >10</span
+                    >
+                    <a href="inbox.html">Inbox</a>
+                  </li>
+                  <li>
+                    <a href="outbox.html">Outbox</a>
+                  </li>
+                  <li>
+                    <a href="completed.html">Completed</a>
+                  </li>
+                  <li>
+                    <a href="cancelled.html">Cancelled</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="reports.html" class="side-nav-link">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="knowledge-base.html" class="side-nav-link">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>SAP Knowledge Base</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="admin.html" class="side-nav-link">
+                <i class="fa-solid fa-user-gear"></i>
+                <span>Admin</span>
+              </a>
+            </li>
+
+            <li class="side-nav-item">
+              <a href="settings.html" class="side-nav-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+          </ul>
+          <!--- End Sidemenu -->
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- ========== Left Sidebar End ========== -->
+
+      <!-- ============================================================== -->
+      <!-- Start Page Content here -->
+      <!-- ============================================================== -->
+
+      <div class="content-page">
+        <div class="content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div class="page-title-box">
+                  <div class="page-title">Outbox</div>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- tab nav -->
+            <ul class="nav nav-tabs nav-justified">
+              <!-- EIN -->
+              <li class="nav-item ep-nav-dropdown">
+                <a
+                  href="#tabEIN"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0 active"
+                >
+                  <i class="fa-solid fa-inbox"></i>
+                  <span class="d-none d-md-block">EIN</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item">EIN ITR</a>
+                  <a class="dropdown-item">EIN ITR (Demo / Stanby Unit)</a>
+                  <a class="dropdown-item">EIN IWP</a>
+                </ul>
+              </li>
+              <!-- EMSB -->
+              <li class="nav-item ep-nav-dropdown">
+                <a
+                  href="#tabEMSB"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-inbox"></i>
+                  <span class="d-none d-md-block">EMSB</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item">EMSB ITR</a>
+                </ul>
+              </li>
+              <!-- EPC -->
+              <li class="nav-item ep-nav-dropdown">
+                <a
+                  href="#tabEPC"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-inbox"></i>
+                  <span class="d-none d-md-block">EPC</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item">EPC ITR (Demo Unit)</a>
+                </ul>
+              </li>
+              <!-- ESP -->
+              <li class="nav-item ep-nav-dropdown">
+                <a
+                  href="#tabESP"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-inbox"></i>
+                  <span class="d-none d-md-block">ESP</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item">Auto DN/CN</a>
+                  <a class="dropdown-item">ED Buffer Stock Order Form</a>
+                  <a class="dropdown-item">ED Free Sample Request Form</a>
+                  <a class="dropdown-item"
+                    >ED Price Maintenance & Quotation System</a
+                  >
+                  <a class="dropdown-item">ENT. and Gift Acceptance</a>
+                  <a class="dropdown-item">ESP Fixed Asset</a>
+                  <a class="dropdown-item">ESP ITR</a>
+                  <a class="dropdown-item">ESP IWT</a>
+                </ul>
+              </li>
+              <!-- ETH -->
+              <li class="nav-item ep-nav-dropdown">
+                <a
+                  href="#tabETH"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-inbox"></i>
+                  <span class="d-none d-md-block">ETH</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item">ETH ITR</a>
+                  <a class="dropdown-item">ETH ITR (Demo Unit)</a>
+                  <a class="dropdown-item">ETH IWT</a>
+                </ul>
+              </li>
+              <!-- Helpdesk -->
+              <li class="nav-item ep-nav-dropdown">
+                <a
+                  href="#tabHelpdesk"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-circle-question"></i>
+                  <span class="d-none d-md-block">Helpdesk</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item">OH ISS</a>
+                  <a class="dropdown-item">OH SAP</a>
+                  <a class="dropdown-item">SAP Password Reset</a>
+                  <a class="dropdown-item">Web Ticketing System</a>
+                </ul>
+              </li>
+              <!-- Regional -->
+              <li class="nav-item ep-nav-dropdown">
+                <a
+                  href="#tabRegional"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                  <span class="d-none d-md-block">Regional</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item">A & P KPI</a>
+                  <a class="dropdown-item">Customer Maintenance</a>
+                  <a class="dropdown-item">Demo / Standby Unit Extension</a>
+                  <a class="dropdown-item">Demo / Standby Unit Loan</a>
+                  <a class="dropdown-item">Demo / Standby Unit Return</a>
+                  <a class="dropdown-item">Form C</a>
+                  <a class="dropdown-item">MDMS</a>
+                  <a class="dropdown-item">System ID Termination</a>
+                  <a class="dropdown-item">Vendor Maintenance</a>
+                </ul>
+              </li>
+              <!-- Support -->
+              <li class="nav-item ep-nav-dropdown">
+                <a
+                  href="#tabSupport"
+                  data-bs-toggle="tab"
+                  aria-expanded="false"
+                  class="nav-link rounded-0"
+                >
+                  <span class="d-none d-md-block">Support</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item">Support sub</a>
+                </ul>
+              </li>
+            </ul>
+            <!-- tab nav -->
+            <!-- tab content -->
+            <div class="tab-content">
+              <!-- EIN -->
+              <div class="tab-pane show active" id="tabEIN">
+                <!-- table search -->
+                <div class="container-fluid w-100 border-bottom">
+                  <div class="row py-2 px-1">
+                    <div class="col-10">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control border-end-0"
+                          placeholder="Subjects"
+                          aria-label="Subjects"
+                        />
+                        <span class="input-group-text bg-transparent">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="d-grid">
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary shadow-none rounded-3 text-primary fw-bold"
+                        >
+                          Search
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- table -->
+                <table class="table table-hover mb-0">
+                  <thead>
+                    <tr>
+                      <th>Subjects</th>
+                      <th>Initiator</th>
+                      <th>Initiated Date</th>
+                      <th>Current Form Status</th>
+                      <th>Pending At</th>
+                      <th>Pending Since</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Jason Tan</td>
+                      <td>EPK Admin</td>
+                      <td>23/12/2023</td>
+                      <td>Pending</td>
+                      <td>ESP FIN</td>
+                      <td>21/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>Eric Choo</td>
+                      <td>EPK Admin</td>
+                      <td>23/12/2023</td>
+                      <td>Pending</td>
+                      <td>ESP FIN</td>
+                      <td>21/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>Jamine Tan</td>
+                      <td>EPK Admin</td>
+                      <td>23/12/2023</td>
+                      <td>Pending</td>
+                      <td>ESP FIN</td>
+                      <td>21/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>May Tan</td>
+                      <td>EPK Admin</td>
+                      <td>23/12/2023</td>
+                      <td>Pending</td>
+                      <td>ESP FIN</td>
+                      <td>21/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>Jason Tan</td>
+                      <td>EPK Admin</td>
+                      <td>23/12/2023</td>
+                      <td>Pending</td>
+                      <td>ESP FIN</td>
+                      <td>21/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>Eric Choo</td>
+                      <td>EPK Admin</td>
+                      <td>23/12/2023</td>
+                      <td>Pending</td>
+                      <td>ESP FIN</td>
+                      <td>21/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>Jamine Tan</td>
+                      <td>EPK Admin</td>
+                      <td>23/12/2023</td>
+                      <td>Pending</td>
+                      <td>ESP FIN</td>
+                      <td>21/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>May Tan</td>
+                      <td>EPK Admin</td>
+                      <td>23/12/2023</td>
+                      <td>Pending</td>
+                      <td>ESP FIN</td>
+                      <td>21/12/2023</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- table control -->
+                <div class="container-fluid">
+                  <div class="row py-2 px-1 bg-light">
+                    <div class="col-4">
+                      <div class="row">
+                        <div class="col-auto">
+                          <select class="form-select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="col-auto">
+                          <label class="col-form-label" for="inlineFormInput"
+                            >items per page</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-4 d-flex justify-content-center align-items-center"
+                    >
+                      <span>1-8</span
+                      >&nbsp;of&nbsp;<span>2,448</span>&nbsp;items
+                    </div>
+                    <div
+                      class="col-4 d-flex justify-content-end align-items-center"
+                    >
+                      <nav>
+                        <ul class="pagination pagination-rounded mb-0">
+                          <li class="page-item">
+                            <a
+                              class="page-link"
+                              href="javascript: void(0);"
+                              aria-label="Previous"
+                            >
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript: void(0);"
+                              >1</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript: void(0);"
+                              >2</a
+                            >
+                          </li>
+                          <li class="page-item active">
+                            <a class="page-link" href="javascript: void(0);"
+                              >3</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript: void(0);"
+                              >4</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript: void(0);"
+                              >5</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a
+                              class="page-link"
+                              href="javascript: void(0);"
+                              aria-label="Next"
+                            >
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- EMSB -->
+              <div class="tab-pane p-2" id="tabEMSB">EMSB</div>
+              <!-- EPC -->
+              <div class="tab-pane" id="tabEPC">EPC</div>
+              <!-- ESP -->
+              <div class="tab-pane" id="tabESP">ESP</div>
+              <!-- ETH -->
+              <div class="tab-pane" id="tabETH">ETH</div>
+              <!-- Helpdesk -->
+              <div class="tab-pane" id="tabHelpdesk">Helpdesk</div>
+              <!-- Regional -->
+              <div class="tab-pane" id="tabRegional">Regional</div>
+            </div>
+            <!-- tab content -->
+          </div>
+          <!-- container -->
+        </div>
+        <!-- content -->
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- End Page content -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!-- Responsive tabs js -->
+    <script src="assets/js/responsivetabs.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
